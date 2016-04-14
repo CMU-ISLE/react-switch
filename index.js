@@ -1,6 +1,10 @@
+// MODULES //
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
+// SWITCH //
 
 class Switch extends React.Component {
 
@@ -18,8 +22,8 @@ class Switch extends React.Component {
 	}
 
 	makeVisible( element, index ) {
-		let o = ( index !== this.state.pos ) ?  {style: {display: 'none'}} : {style: {display: 'inline'}};
-		return React.cloneElement( element, o);
+		let o = ( index !== this.state.pos ) ?  { style: { display: 'none' } } : { style: { display: 'inline' } };
+		return React.cloneElement( element, o );
 	}
 
 	constructor() {
@@ -32,7 +36,7 @@ class Switch extends React.Component {
 	render() {
 		let children = React.Children.map( this.props.children, this.makeVisible.bind(this) );
 		return (
-			<div className="switch" onClick={this.handleClick.bind(this)}>
+			<div className="switch" onClick={ this.handleClick.bind(this) }>
 				{children}
 			</div>
 		);
