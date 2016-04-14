@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
     "watch": "watchify example/main.js -p browserify-hmr -o example/bundle.js -dv",
-    "start": "ecstatic -p 8080 example & npm run watch"
+    "start": "ecstatic -p 8080 example & npm run watch",
+    "deploy": "browserify example/main.js -o example/bundle.js && gh-pages -d example"
   },
   "files": [
     "dist/index.js"
