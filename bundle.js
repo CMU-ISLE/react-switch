@@ -51,6 +51,11 @@ var App = function (_Component) {
 						)
 					),
 					_react2.default.createElement(
+						'p',
+						null,
+						'Click on the displayed option to switch between all available ones:'
+					),
+					_react2.default.createElement(
 						_index2.default,
 						null,
 						_react2.default.createElement(
@@ -62,6 +67,11 @@ var App = function (_Component) {
 							'div',
 							null,
 							'Option 2'
+						),
+						_react2.default.createElement(
+							'div',
+							null,
+							'Option 3'
 						)
 					)
 				)
